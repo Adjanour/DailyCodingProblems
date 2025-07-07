@@ -5,12 +5,15 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/adjanour/DailyCodingProblems/day09"
+
 	"github.com/adjanour/DailyCodingProblems/day08"
 )
 
 // auto-inserted imports go here
 
 var registry = map[string]func(){
+	"09": day09.Run,
 	"08": day08.Run,
 	// auto-inserted entries go here
 }

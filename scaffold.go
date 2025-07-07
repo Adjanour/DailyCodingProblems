@@ -29,6 +29,7 @@ func main() {
 		"run.go":           runTemplate,
 		"solution.go":      solutionTemplate,
 		"solution_test.go": testTemplate,
+		"thoughts.md":      thinkingTemplate,
 	}
 
 	for name, content := range files {
@@ -44,7 +45,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("✅ Scaffold created and CLI updated for day", *day)
+	fmt.Println("Scaffold created and CLI updated for day", *day)
 }
 
 func writeTemplate(path, tmpl, day string) error {
@@ -103,6 +104,9 @@ func Run() {
 const solutionTemplate = `package day{{.Day}}
 
 // Your solution logic goes here
+`
+const thinkingTemplate = ` # My thought process {{.Day}}
+// thoughts go here
 `
 
 const testTemplate = `package day{{.Day}}
